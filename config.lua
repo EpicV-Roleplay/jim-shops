@@ -8,11 +8,11 @@ Config = {}
 
 Config.Debug = false -- Enable to add debug boxes and message.
 
-Config.img = "qb-inventory/html/images/" -- Set this to your inventory
+Config.img = "lj-inventory/html/images/" -- Set this to your inventory
 
 Config.Peds = true -- Set to true if you want Shops to have Peds
 
-Config.Limit = false -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
+Config.Limit = true -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 
 Config.Products = {
     ["normal"] = {
@@ -46,16 +46,18 @@ Config.Products = {
         [14] = { name = "cleaningkit", price = 150, amount = 150, info = {} },
         [15] = { name = "advancedrepairkit", price = 500, amount = 50, info = {}, requiredJob = { "mechanic" } },
     },
-    ["weedshop"] = {
+--[[     ["weedshop"] = {
         [1] = { name = "joint", price = 10, amount = 1000, info = {} },
         [2] = { name = "weapon_poolcue", price = 100, amount = 1000, info = {} },
         [3] = { name = "weed_nutrition", price = 20, amount = 1000, info = {} },
         [4] = { name = "empty_weed_bag", price = 2, amount = 1000, info = {} },
         [5] = { name = "rolling_paper", price = 2, amount = 1000, info = {} },
-    },
+    }, ]]
     ["gearshop"] = {
         [1] = { name = "diving_gear", price = 2500, amount = 10, info = {} },
         [2] = { name = "jerry_can", price = 200, amount = 50, info = {} },
+		[3] = { name = "fishingrod", price = 1200, amount = 10, info = {} },
+		[4] = { name = "fishbait", price = 2, amount = 50000, info = {} },
     },
     ["leisureshop"] = {
         [1] = { name = "parachute", price = 2500, amount = 10, info = {} },
@@ -76,18 +78,26 @@ Config.Products = {
         [1] = { name = "coffee", price = 5, amount = 500 },
         [2] = { name = "lighter", price = 2, amount = 50 },
     },
-    ["casino"] = {
-        [1] = { name = 'casinochips', price = 100, amount = 999999 },
-    },
 	["electronics"] = {
         [1] = { name = "phone", price = 850, amount = 50 },
-        [2] = { name = "radio", price = 250, amount = 50, },
+        [2] = { name = "radio", price = 250, amount = 0, },
         [3] = { name = "screwdriverset", price = 350, amount = 50, },
         [4] = { name = "binoculars", price = 50, amount = 50, },
         [5] = { name = "fitbit", price = 400, amount = 150, },
+		[6] = { name = "boombox", price = 250, amount = 5, },
+		[7] = { name = "camera", price = 450, amount = 10, },
 	},	
 	["blackmarket"] = {
         [1] = { name = "radioscanner", price = 850, amount = 5 },
+		[2] = { name = "tunerlaptop", price = 2500, amount = 1 },
+	},
+	["seeddealer"] = {
+        [1] = { name = "weed_white-widow_seed", price = 50, amount = 100 },
+		[2] = { name = "weed_skunk_seed", price = 50, amount = 1 },
+		[3] = { name = "weed_purple-haze_seed", price = 50, amount = 100 },
+		[4] = { name = "weed_og-kush_seed", price = 50, amount = 50 },
+		[5] = { name = "weed_amnesia_seed", price = 50, amount = 100 },
+		[5] = { name = "weed_ak47_seed", price = 50, amount = 100 },
 	},
 }
 
@@ -164,7 +174,7 @@ Config.Locations = {
 		["blipcolour"] = 5,
     },
 	-- Ammunation VANILLA Locations
-    ["ammunation"] = {
+--[[     ["ammunation"] = {
         ["label"] = "Ammunation",
 		["type"] = "weapons",
 		["model"] = `s_m_m_ammucountry`,
@@ -184,10 +194,10 @@ Config.Locations = {
         ["products"] = Config.Products["weapons"],
         ["blipsprite"] = 567,
 		["blipcolour"] = 1,
-    },
+    }, ]]
 
     -- Ammunation GABZ Locations
---[[	["ammunation"] = {
+	["ammunation"] = {
         ["label"] = "Ammunation",
 		["type"] = "weapons",
 		["model"] = `s_m_m_ammucountry`,
@@ -202,15 +212,15 @@ Config.Locations = {
 			vector4(2564.85, 298.83, 108.74, 283.17),
 			vector4(-1112.4, 2697.08, 18.55, 152.96),
 			vector4(841.16, -1028.63, 28.19, 294.2),
-			vector4(-1310.71, -394.33, 36.7, 340.51)
+			vector4(-1310.71, -394.33, 36.7, 340.51),
 		},
         ["products"] = Config.Products["weapons"],
         ["blipsprite"] = 110,
 		["blipcolour"] = 1,
-    },]]
+    },
 
     -- Casino Locations
-	["casino"] = {
+--[[ 	["casino"] = {
 		["label"] = "Diamond Casino",
 		["type"] = "items",
 		["model"] = `s_f_m_shop_high`,
@@ -227,9 +237,9 @@ Config.Locations = {
 		["products"] = Config.Products["normal"],
 		["blipsprite"] = 52,
 		["blipcolour"] = 0,
-	},
+	}, ]]
 
-    -- Weedshop Locations
+--[[     -- Weedshop Locations
     ["weedshop"] = {
 		["label"] = "Smoke on the Water",
 		["type"] = "items",
@@ -238,7 +248,7 @@ Config.Locations = {
 		["products"] = Config.Products["weedshop"],
 		["blipsprite"] = 496,
 		["blipcolour"] = 2,
-   },
+   }, ]]
 
     -- Bean Coffee Locations
     ["beancoffee"] = {
@@ -298,6 +308,20 @@ Config.Locations = {
 		["blipsprite"] = 619,
 		["blipcolour"] = 7,
 	},
+	["seeddealer"] = {
+		["label"] = "Samenhändler",
+		["type"] = "items",
+		["model"] = `MP_M_Weed_01`,
+		["coords"] = { 
+			vector4(1469.8, 6549.89, 14.9, 354.29),
+			},
+		["products"] = Config.Products["seeddealer"],
+		["hideblip"] = true,
+	},
+}
+
+
+
 	--[[["blackmarket"] = {
 		["label"] = "Black Market",
 		["type"] = "items",
@@ -309,4 +333,3 @@ Config.Locations = {
 		["products"] = Config.Products["blackmarket"],
 		["hideblip"] = true,
 	},]]
-}
