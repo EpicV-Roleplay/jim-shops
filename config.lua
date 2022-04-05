@@ -8,7 +8,7 @@ Config = {}
 
 Config.Debug = false -- Enable to add debug boxes and message.
 
-Config.img = "qb-inventory/html/images/" -- Set this to your inventory
+Config.img = "lj-inventory/html/images/" -- Set this to your inventory
 
 Config.Peds = true -- Set to true if you want Shops to have Peds
 
