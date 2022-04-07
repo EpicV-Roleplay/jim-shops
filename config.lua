@@ -46,9 +46,18 @@ Config.Products = {
         [14] = { name = "cleaningkit", price = 150, amount = 150, info = {} },
         [15] = { name = "advancedrepairkit", price = 500, amount = 50, info = {}, requiredJob = { "mechanic" } },
     },
+--[[     ["weedshop"] = {
+        [1] = { name = "joint", price = 10, amount = 1000, info = {} },
+        [2] = { name = "weapon_poolcue", price = 100, amount = 1000, info = {} },
+        [3] = { name = "weed_nutrition", price = 20, amount = 1000, info = {} },
+        [4] = { name = "empty_weed_bag", price = 2, amount = 1000, info = {} },
+        [5] = { name = "rolling_paper", price = 2, amount = 1000, info = {} },
+    }, ]]
     ["gearshop"] = {
         [1] = { name = "diving_gear", price = 2500, amount = 10, info = {} },
         [2] = { name = "jerry_can", price = 200, amount = 50, info = {} },
+		[3] = { name = "fishingrod", price = 1200, amount = 10, info = {} },
+		[4] = { name = "fishbait", price = 2, amount = 50000, info = {} },
     },
     ["leisureshop"] = {
         [1] = { name = "parachute", price = 2500, amount = 10, info = {} },
@@ -66,13 +75,24 @@ Config.Products = {
     },    
 	["electronics"] = {
         [1] = { name = "phone", price = 850, amount = 50 },
-        [2] = { name = "radio", price = 250, amount = 50, },
+        [2] = { name = "radio", price = 250, amount = 0, },
         [3] = { name = "screwdriverset", price = 350, amount = 50, },
         [4] = { name = "binoculars", price = 50, amount = 50, },
         [5] = { name = "fitbit", price = 400, amount = 150, },
+		[6] = { name = "boombox", price = 250, amount = 5, },
+		[7] = { name = "camera", price = 450, amount = 10, },
 	},	
 	["blackmarket"] = {
         [1] = { name = "radioscanner", price = 850, amount = 5 },
+		[2] = { name = "tunerlaptop", price = 2500, amount = 1 },
+	},
+	["seeddealer"] = {
+        [1] = { name = "weed_white-widow_seed", price = 50, amount = 100 },
+		[2] = { name = "weed_skunk_seed", price = 50, amount = 1 },
+		[3] = { name = "weed_purple-haze_seed", price = 50, amount = 100 },
+		[4] = { name = "weed_og-kush_seed", price = 50, amount = 50 },
+		[5] = { name = "weed_amnesia_seed", price = 50, amount = 100 },
+		[5] = { name = "weed_ak47_seed", price = 50, amount = 100 },
 	},
 }
 
@@ -219,6 +239,20 @@ Config.Locations = {
 		["blipsprite"] = 619,
 		["blipcolour"] = 7,
 	},
+	["seeddealer"] = {
+		["label"] = "Samenhändler",
+		["type"] = "items",
+		["model"] = `MP_M_Weed_01`,
+		["coords"] = { 
+			vector4(1469.8, 6549.89, 14.9, 354.29),
+			},
+		["products"] = Config.Products["seeddealer"],
+		["hideblip"] = true,
+	},
+}
+
+
+
 	--[[["blackmarket"] = {
 		["label"] = "Black Market",
 		["type"] = "items",
@@ -230,4 +264,3 @@ Config.Locations = {
 		["products"] = Config.Products["blackmarket"],
 		["hideblip"] = true,
 	},]]
-}
