@@ -12,7 +12,7 @@ Config.img = "lj-inventory/html/images/" -- Set this to your inventory
 
 Config.Peds = true -- Set to true if you want Shops to have Peds
 
-Config.Limit = false -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
+Config.Limit = true -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 
 Config.Products = {
     ["normal"] = {
@@ -46,13 +46,6 @@ Config.Products = {
         [14] = { name = "cleaningkit", price = 150, amount = 150, info = {} },
         [15] = { name = "advancedrepairkit", price = 500, amount = 50, info = {}, requiredJob = { "mechanic" } },
     },
-    ["weedshop"] = {
-        [1] = { name = "joint", price = 10, amount = 1000, info = {} },
-        [2] = { name = "weapon_poolcue", price = 100, amount = 1000, info = {} },
-        [3] = { name = "weed_nutrition", price = 20, amount = 1000, info = {} },
-        [4] = { name = "empty_weed_bag", price = 2, amount = 1000, info = {} },
-        [5] = { name = "rolling_paper", price = 2, amount = 1000, info = {} },
-    },
     ["gearshop"] = {
         [1] = { name = "diving_gear", price = 2500, amount = 10, info = {} },
         [2] = { name = "jerry_can", price = 200, amount = 50, info = {} },
@@ -71,14 +64,6 @@ Config.Products = {
         [6] = { name = "weapon_vintagepistol", price = 4000, amount = 5, info = nil, requiresLicense = true },
         [7] = { name = "pistol_ammo", price = 250, amount = 250, info = {}, requiresLicense = true },
     },    
-
-    ["coffeeplace"] = {
-        [1] = { name = "coffee", price = 5, amount = 500 },
-        [2] = { name = "lighter", price = 2, amount = 50 },
-    },
-    ["casino"] = {
-        [1] = { name = 'casinochips', price = 100, amount = 999999 },
-    },
 	["electronics"] = {
         [1] = { name = "phone", price = 850, amount = 50 },
         [2] = { name = "radio", price = 250, amount = 50, },
@@ -92,32 +77,7 @@ Config.Products = {
 }
 
 Config.Locations = {
-    -- 24/7 Locations
-    ["247supermarket"] = {
-        ["label"] = "24/7 Supermarket",
-		["type"] = "items",
-		["model"] = `mp_m_shopkeep_01`,
-		["killable"] = true,
-		["logo"] = "https://i.imgur.com/bPcM0TM.png",
-        ["coords"] = {
-			vector4(24.5, -1346.19, 29.5, 266.78),
-			vector4(-3039.91, 584.26, 7.91, 16.79),
-			vector4(-3243.27, 1000.1, 12.83, 358.73),
-			vector4(1728.28, 6416.03, 35.04, 242.45),
-			vector4(1697.96, 4923.04, 42.06, 326.61),
-			vector4(1959.6, 3740.93, 32.34, 296.84),
-			vector4(549.16, 2670.35, 42.16, 92.53),
-			vector4(2677.41, 3279.8, 55.24, 334.16),
-			vector4(2556.19, 380.89, 108.62, 355.58),
-			vector4(372.82, 327.3, 103.57, 255.46),
-			vector4(161.21, 6642.32, 31.61, 223.57),
-		},
-        ["products"] = Config.Products["normal"],
-        ["blipsprite"] = 628,
-		["blipcolour"] = 2,
-    },	
---[[    
-	-- 24/7 GABZ Locations
+		-- 24/7 GABZ Locations
     ["247supermarket"] = {
         ["label"] = "24/7 Supermarket",
 		["type"] = "items",
@@ -141,7 +101,7 @@ Config.Locations = {
         ["blipsprite"] = 628,
 		["blipcolour"] = 2,
     },
-]]
+
     -- LTD Gasoline Locations
     ["ltdgasoline"] = {
         ["label"] = "LTD Gasoline",
@@ -189,29 +149,6 @@ Config.Locations = {
         ["blipsprite"] = 402,
 		["blipcolour"] = 5,
     },
-	-- Ammunation VANILLA Locations
-    ["ammunation"] = {
-        ["label"] = "Ammunation",
-		["type"] = "weapons",
-		["model"] = `s_m_m_ammucountry`,
-		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/a/aa/Ammunation-GTAV.png",
-        ["coords"] = {
-            vector4(808.94, -2158.99, 29.62, 330.26),
-            vector4(-660.98, -933.6, 21.83, 154.74),
-			vector4(1693.16, 3761.94, 34.71, 189.83),
-            vector4(-330.72, 6085.81, 31.45, 190.52),
-			vector4(253.41, -51.67, 69.94, 28.88),
-			vector4(23.69, -1105.95, 29.8, 124.58),
-            vector4(2566.81, 292.54, 108.73, 320.09),
-            vector4(-1118.19, 2700.5, 18.55, 185.31),
-            vector4(841.31, -1035.28, 28.19, 334.27),
-			vector4(-1304.44, -395.68, 36.7, 41.85),
-		},
-        ["products"] = Config.Products["weapons"],
-        ["blipsprite"] = 567,
-		["blipcolour"] = 1,
-    },
---[[
     -- Ammunation GABZ Locations
 	["ammunation"] = {
         ["label"] = "Ammunation",
@@ -233,48 +170,6 @@ Config.Locations = {
         ["products"] = Config.Products["weapons"],
         ["blipsprite"] = 110,
 		["blipcolour"] = 1,
-    },
-]]
-    -- Casino Locations
-	["casino"] = {
-		["label"] = "Diamond Casino",
-		["type"] = "items",
-		["model"] = `s_f_m_shop_high`,
-		["coords"] = { vector4(949.3, 32.01, 71.84, 81.33), },
-		["products"] = Config.Products["casino"],
-		["blipsprite"] = 617,
-		["blipcolour"] = 0,
-	},
-    ["casino2"] = {
-		["label"] = "Casino Bar",
-		["coords"] = { vector4(950.68, 34.56, 71.85, 29.86), },
-		["type"] = "items",
-		["model"] = `S_M_M_HighSec_01`,
-		["products"] = Config.Products["normal"],
-		["blipsprite"] = 52,
-		["blipcolour"] = 0,
-	},
-
-    -- Weedshop Locations
-    ["weedshop"] = {
-		["label"] = "Smoke on the Water",
-		["type"] = "items",
-		["model"] = `mp_f_weed_01`,
-		["coords"] = { vector4(-1173.12, -1572.71, 4.66, 123.56), },
-		["products"] = Config.Products["weedshop"],
-		["blipsprite"] = 496,
-		["blipcolour"] = 2,
-   },
-
-    -- Bean Coffee Locations
-    ["beancoffee"] = {
-		["label"] = "Bean Machine Coffee",
-		["type"] = "items",
-		["model"] = `A_F_Y_Hipster_02`,
-		["coords"] = { vector4(-628.97, 238.27, 81.9, 1.28), },
-		["products"] = Config.Products["coffeeplace"],
-		["blipsprite"] = 52,
-		["blipcolour"] = 31,
     },
 
     -- Sea Word Locations
