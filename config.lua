@@ -8,11 +8,11 @@ Config = {}
 
 Config.Debug = false -- Enable to add debug boxes and message.
 
-Config.img = "qb-inventory/html/images/" -- Set this to your inventory
+Config.img = "lj-inventory/html/images/" -- Set this to your inventory
 
 Config.Peds = true -- Set to true if you want Shops to have Peds
 
-Config.Limit = false -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
+Config.Limit = true -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 
 Config.Products = {
     ["normal"] = {
@@ -93,7 +93,7 @@ Config.Products = {
 
 Config.Locations = {
     -- 24/7 Locations
-    ["247supermarket"] = {
+--[[    ["247supermarket"] = {
         ["label"] = "24/7 Supermarket",
 		["type"] = "items",
 		["model"] = `mp_m_shopkeep_01`,
@@ -115,8 +115,8 @@ Config.Locations = {
         ["products"] = Config.Products["normal"],
         ["blipsprite"] = 628,
 		["blipcolour"] = 2,
-    },	
---[[    
+    },	]]
+    
 	-- 24/7 GABZ Locations
     ["247supermarket"] = {
         ["label"] = "24/7 Supermarket",
@@ -141,7 +141,7 @@ Config.Locations = {
         ["blipsprite"] = 628,
 		["blipcolour"] = 2,
     },
-]]
+
     -- LTD Gasoline Locations
     ["ltdgasoline"] = {
         ["label"] = "LTD Gasoline",
@@ -190,7 +190,7 @@ Config.Locations = {
 		["blipcolour"] = 5,
     },
 	-- Ammunation VANILLA Locations
-    ["ammunation"] = {
+--[[    ["ammunation"] = {
         ["label"] = "Ammunation",
 		["type"] = "weapons",
 		["model"] = `s_m_m_ammucountry`,
@@ -210,8 +210,8 @@ Config.Locations = {
         ["products"] = Config.Products["weapons"],
         ["blipsprite"] = 567,
 		["blipcolour"] = 1,
-    },
---[[
+    },]]
+
     -- Ammunation GABZ Locations
 	["ammunation"] = {
         ["label"] = "Ammunation",
@@ -234,7 +234,7 @@ Config.Locations = {
         ["blipsprite"] = 110,
 		["blipcolour"] = 1,
     },
-]]
+
     -- Casino Locations
 	["casino"] = {
 		["label"] = "Diamond Casino",
