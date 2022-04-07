@@ -79,8 +79,8 @@ Config.Products = {
         [3] = { name = "screwdriverset", price = 350, amount = 50, },
         [4] = { name = "binoculars", price = 50, amount = 50, },
         [5] = { name = "fitbit", price = 400, amount = 150, },
-		[6] = { name = "boombox", price = 250, amount = 5, },
-		[7] = { name = "camera", price = 450, amount = 10, },
+		--[6] = { name = "boombox", price = 250, amount = 5, },
+		[6] = { name = "camera", price = 450, amount = 10, },
 	},	
 	["blackmarket"] = {
         [1] = { name = "radioscanner", price = 850, amount = 5 },
