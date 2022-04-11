@@ -29,6 +29,7 @@ Config.Products = {
         [11] = { name = "bandage", price = 100, amount = 50, info = {} },
         [12] = { name = "lighter", price = 2, amount = 50, info = {} },
         [13] = { name = "rolling_paper", price = 2, amount = 5000, info = {} },
+		[14] = { name = "redwoodcigs", price = 2, amount = 5000, info = {} },
     },
     ["hardware"] = {
         [1] = { name = "lockpick", price = 200, amount = 50, info = {} },
@@ -87,14 +88,14 @@ Config.Products = {
         [1] = { name = "radioscanner", price = 850, amount = 5 },
 		[2] = { name = "tunerlaptop", price = 2500, amount = 1 },
 	},
-	["seeddealer"] = {
-        [1] = { name = "weed_white-widow_seed", price = 50, amount = 100 },
-		[2] = { name = "weed_skunk_seed", price = 50, amount = 1 },
-		[3] = { name = "weed_purple-haze_seed", price = 50, amount = 100 },
-		[4] = { name = "weed_og-kush_seed", price = 50, amount = 50 },
-		[5] = { name = "weed_amnesia_seed", price = 50, amount = 100 },
-		[5] = { name = "weed_ak47_seed", price = 50, amount = 100 },
-	},
+	-- ["seeddealer"] = {
+    --     [1] = { name = "weed_white-widow_seed", price = 50, amount = 100 },
+	-- 	[2] = { name = "weed_skunk_seed", price = 50, amount = 1 },
+	-- 	[3] = { name = "weed_purple-haze_seed", price = 50, amount = 100 },
+	-- 	[4] = { name = "weed_og-kush_seed", price = 50, amount = 50 },
+	-- 	[5] = { name = "weed_amnesia_seed", price = 50, amount = 100 },
+	-- 	[5] = { name = "weed_ak47_seed", price = 50, amount = 100 },
+	-- },
 }
 
 Config.Locations = {
@@ -330,16 +331,16 @@ Config.Locations = {
 		["blipsprite"] = 619,
 		["blipcolour"] = 7,
 	},
-	["seeddealer"] = {
-		["label"] = "Samenhändler",
-		["type"] = "items",
-		["model"] = `MP_M_Weed_01`,
-		["coords"] = { 
-			vector4(1469.8, 6549.89, 14.9, 354.29),
-			},
-		["products"] = Config.Products["seeddealer"],
-		["hideblip"] = true,
-	},
+	-- ["seeddealer"] = {
+	-- 	["label"] = "Samenhändler",
+	-- 	["type"] = "items",
+	-- 	["model"] = `MP_M_Weed_01`,
+	-- 	["coords"] = { 
+	-- 		vector4(1469.8, 6549.89, 14.9, 354.29),
+	-- 		},
+	-- 	["products"] = Config.Products["seeddealer"],
+	-- 	["hideblip"] = true,
+	-- },
 }
 
 
