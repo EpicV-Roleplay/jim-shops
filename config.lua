@@ -12,7 +12,7 @@ Config.img = "lj-inventory/html/images/" -- Set this to your inventory
 
 Config.Peds = true -- Set to true if you want Shops to have Peds
 
-Config.Limit = true -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
+Config.Limit = false -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 
 Config.Products = {
     ["normal"] = {
@@ -92,7 +92,6 @@ Config.Products = {
         [5] = { name = "fitbit", price = 400, amount = 150, },
 		--[6] = { name = "boombox", price = 250, amount = 5, },
 		[6] = { name = "camera", price = 450, amount = 10, },
-		[7] = { name = "photoalbum", price = 50, amount = 10, },
 	},	
 	["blackmarket"] = {
         [1] = { name = "radioscanner", price = 850, amount = 5 },

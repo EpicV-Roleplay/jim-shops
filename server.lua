@@ -152,4 +152,3 @@ QBCore.Functions.CreateCallback('jim-shops:server:getLicenseStatus', function(so
     local licenseItem = Player.Functions.GetItemByName("weaponlicense")
     cb(licenseTable.weapon, licenseItem)
 end)
-
